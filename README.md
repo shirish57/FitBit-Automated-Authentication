@@ -5,6 +5,8 @@ The project provides the automatic authorization for the users who trying to acc
 
 FitBit allows 150 API calls per day [2], so the program calls the API every 9.6 minutes and stores the user data in a file.
 
+Usage: ```python MainApp <Duration> <UserName> <Password>```
+
 
 # References:
 [1] Access Token Request, https://dev.fitbit.com/docs/oauth2/
