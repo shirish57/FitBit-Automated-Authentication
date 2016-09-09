@@ -27,17 +27,18 @@ def getActivityLog(userName, password):
 	
 	''' 
 	
-	print "Please visit the link below and approve the app:\n %s" % auth_url
+	print "Please visit the link below and approve the app:\n %s" % auth_url + "\n"
 	
 	# Fetch the access_code from the auth_url. Set the access code that is part of the arguments of the callback URL FitBit redirects to.
 	access_code = AccessCodeRetriever.getAcessCodeUrl(userName, password, auth_url);
-	print access_code
+	print 'Access Code: ' + access_code + "\n"
 	# access_code = raw_input("Please enter code (from the URL you were redirected to): ")
 	
 	# Use the temporary access code to obtain a more permanent pair of tokens
 	print "Calling GetAccessToken()"
 	token = z.GetAccessToken(access_code)
 	print "Tokens are : ", token
+	print "\n"
 	# Save the token to a file
 	print "calling json.dump()"
 	json.dump(token, open(tokenfile,'w'))

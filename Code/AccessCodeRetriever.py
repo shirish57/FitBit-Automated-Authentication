@@ -50,11 +50,11 @@ def getAccessCode(responseUrl):
 	""" 
 		Function to extract and return the Access Code from the url
 	"""
-	print responseUrl
+	#print responseUrl
 	try:
 		startIndex = responseUrl.index("code=") + 5
 		endIndex = responseUrl.index("#_=_")
-		code = responseUrl[startIndex: endIndex]
+		code = responseUrl[startIndex : endIndex]
 		return code
 	except ValueError:
 		print 'Authentication Not Successful!'
